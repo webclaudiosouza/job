@@ -2,11 +2,13 @@ const express =  require('express');
 const app = express();
 const bodyParser = require('body-parser')
 
+const path = require('path')
+
 const port = process.env.PORT || 3000
 
 //importando sqlite
 const sqlite = require('sqlite')
-const dbConnection = sqlite.open('banco.sqlite', {Promise})
+const dbConnection = sqlite.open(path.resolve(__dirname, 'banco.sqlite'), {Promise})
 
 app.set('view engine', 'ejs')
 
