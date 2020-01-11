@@ -112,4 +112,4 @@ app.listen(port, (err) => {
     }else{
         console.log('Servidor Jobify rodando...')
     }
-});
+})
